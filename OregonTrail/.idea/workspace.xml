@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="800728d5-bcc8-4589-b59d-e324cf0adca3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Trail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Inventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Wagon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +26,52 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OregonTrail" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OregonTrail" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OregonTrail" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="OregonTrail" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -25,20 +79,22 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NdzZ2zL1qN4RkaAuyL3HNylJX2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/hbomb/OneDrive/Documents/GitHub/OregonTrail/OregonTrail"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hbomb/AndroidStudioProjects/MP1TestA&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="OregonTrail.app.main" />
@@ -109,5 +165,16 @@
       <updated>1680008798564</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
