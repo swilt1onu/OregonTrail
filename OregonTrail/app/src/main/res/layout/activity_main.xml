@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/userOutputBox"
         android:layout_width="333dp"
         android:layout_height="285dp"
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="39dp"
-        android:text="TextView"
+        android:text=" "
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/userOutputStatsBox"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,27 +33,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/userOutputStatsBox"
         android:layout_width="338dp"
         android:layout_height="83dp"
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="39dp"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBottom_toTopOf="@+id/userInputBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userOutputBox" />
 
-    <TextView
+    <EditText
         android:id="@+id/userInputBox"
         android:layout_width="338dp"
         android:layout_height="97dp"
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="126dp"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
