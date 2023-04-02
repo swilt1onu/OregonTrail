@@ -8,14 +8,16 @@
 
     <TextView
         android:id="@+id/userOutputBox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="37dp"
+        android:layout_width="333dp"
+        android:layout_height="285dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="39dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/userInputBox"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/userOutputStatsBox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OregonTrailTitleLabel" />
 
@@ -23,8 +25,8 @@
         android:id="@+id/OregonTrailTitleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginBottom="67dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="25dp"
         android:text="OregonTrail"
         app:layout_constraintBottom_toTopOf="@+id/userOutputBox"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,15 +34,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/userInputBox"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/userOutputStatsBox"
+        android:layout_width="338dp"
+        android:layout_height="83dp"
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="39dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/userInputBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userOutputBox" />
+
+    <TextView
+        android:id="@+id/userInputBox"
+        android:layout_width="338dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="126dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userOutputBox" />
+        app:layout_constraintTop_toBottomOf="@+id/userOutputStatsBox" />
 </androidx.constraintlayout.widget.ConstraintLayout>

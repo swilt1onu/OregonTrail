@@ -69,7 +69,7 @@ public class Items {
         System.out.println("Item 8 - " + item8.getItemName() + ", Cost: $" + item8.getCost() + ", Available: " + item8.getAmountAvailable() + "lbs" + " : "+ item8.getItemDescription());
         System.out.println("Item 9 - " + item9.getItemName() + ", Cost: $" + item9.getCost() + ", Available: " + item9.getAmountAvailable() + "lbs" + " : "+ item9.getItemDescription());
 
-    
+
 
         //ask the user for the amount of item 0 (in weight or quantity) they want to purchase
         //check to see if the user has enough money
