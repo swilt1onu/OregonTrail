@@ -14,6 +14,8 @@ public class Wagon {
     private int[] itemCount = {0,0,0,0,0,0,0,0,0,0};
     private int pace = 0; //set by the player
 
+    private int wallet = 0;
+
     //methods
     public void setPace(int pace){
         if (pace == 3){
@@ -41,8 +43,8 @@ public class Wagon {
         return weight;
     }
     public void setWeight(){
-        double temp;
-        for (int i; i <= 10; i++){
+        double temp = 0;
+        for (int i = 0; i <= 10; i++){
             temp = itemCount[i]; // * itemWeight[i]; yet to be added
         }
         this.weight = temp;
@@ -51,4 +53,33 @@ public class Wagon {
     public int getitemCount(int itemIndex){
         return itemCount[itemIndex];
     }
+
+    public int getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(int wallet) {
+        this.wallet = wallet;
+    }
+
+    public void setItemCount(int[] itemCount) {
+        this.itemCount = itemCount;
+    }
+
+    public int[] getItemCount() {
+        return itemCount;
+    }
+
+    public int getOxenCount() {
+        return oxenCount;
+    }
+
+    public int getPace() {
+        return pace;
+    }
+
+    public void setOxenCount(int oxenCount) {
+        this.oxenCount = oxenCount;
+    }
 }
+
