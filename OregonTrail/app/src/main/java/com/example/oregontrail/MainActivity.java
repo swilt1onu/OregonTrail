@@ -10,12 +10,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-
-
-    //ask the user for the amount of item 0 (in weight or quantity) they want to purchase
-    //check to see if the user has enough money
-    //check to see if the amount available the user wants is available
-    //adds the item amount to the wagon / inventory.
+    //starts with a long string of text explaining tne context of the situation
+    //from nebraska to ...
+    //starts off in the first store, allows the player to buy items
+    //accessing the wagon class to store the items
+    //then access the trail class to encounter the first obstacle / first day.
+    //current weather and party health will be displayed in an "edittext" box
 
 
 
