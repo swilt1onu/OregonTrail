@@ -34,7 +34,7 @@ public class Wagon {
             this.pace = pace; //Resting pace
             System.out.println("Your wagon is now resting.");
         }
-        else if (pace > 3 || pace < 0){
+        else {
             System.out.println("Please pick a number between 3-0.");
         }
     }

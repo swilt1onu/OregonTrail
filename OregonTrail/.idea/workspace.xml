@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="800728d5-bcc8-4589-b59d-e324cf0adca3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Party.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Trail.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Trail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/oregontrail/Wagon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
