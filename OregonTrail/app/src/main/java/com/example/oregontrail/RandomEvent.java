@@ -1,13 +1,23 @@
 package com.example.oregontrail;
-
 import java.util.Random;
 
+/**
+ * allows for random events to occur, uses the percent chance and rng to find out what will happen
+ */
 public class RandomEvent {
+    /**
+     * default constructor for the random event class
+     */
     public RandomEvent() {
     }
 
+    //random event object used for rng
     Random rand = new Random(System.currentTimeMillis());
 
+    /**
+     * gets the name of the random event that occurs
+     * @return the name of the random event that will occur
+     */
     public String getEvent(){
         int temp = rand.nextInt(5);
 
