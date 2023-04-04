@@ -1,3 +1,5 @@
+package com.example.oregontrail;
+
 import com.example.oregontrail.Items;
 
 public class Store {
