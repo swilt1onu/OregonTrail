@@ -13,8 +13,8 @@
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="39dp"
-        android:text=" "
-        android:textSize="10sp"
+        android:text=" d"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/userOutputStatsBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,7 +40,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="39dp"
-        android:text=""
+        android:text=" d"
         app:layout_constraintBottom_toTopOf="@+id/userInputBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,9 +53,22 @@
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="126dp"
-        android:text=""
+        android:digits="0123456789"
+        android:hint="Type number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userOutputStatsBox" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:onClick="btnClicked"
+        android:text="Enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
 </androidx.constraintlayout.widget.ConstraintLayout>
