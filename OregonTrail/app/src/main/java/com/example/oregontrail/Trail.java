@@ -2,10 +2,10 @@ package com.example.oregontrail;
 import java.util.Random;
 
 /**
- *
- *
- *
- *
+ * Creates a "Trail" object in the game that is in charge of multiple game events
+ * such as weather, temperature, time and landmarks.
+ * This class will eventually be able to keep track of the distance that the
+ * player is traveling and should be able to detect when the player reaches landmarks/obstacles.
  */
 public class Trail {
 
@@ -46,11 +46,11 @@ public class Trail {
 
 
     //methods
-    public void randomEvent (int randomEventIndex){
-        //Should make a separate class for random events to store
-        //lists and different events to be used by the index
-    }
 
+    /**
+     * Used to generate a weather condition for the day.
+     * @return weather condition
+     */
     private String generateWeather() {
         int temp;
         temp = generator.nextInt(100);
@@ -77,36 +77,59 @@ public class Trail {
         return currentWeather;
     }
 
+    /**
+     * Returns the current weather
+     * @return current weather
+     */
     public String getWeather() {
         return currentWeather;
     }
 
-
+    /**
+     * Will eventually be used to keep track of land marks
+     * @return the land mark index
+     */
     public int getLandmarkIndex() {
         return landmarkIndex;
     }
 
-
-    public int getDistance() {
-        return distance;
-    }
-
-    public int getTotalDistance() {
-        return totalDistance;
-    }
-
-    public int getRandomEventIndex() {
-        return randomEventIndex;
-    }
-
-    public void setCurrentWeather(String currentWeather) {
-        this.currentWeather = currentWeather;
-    }
-
+    /**
+     * Sets the landmark index
+     * @param landmarkIndex
+     */
     public void setLandmarkIndex(int landmarkIndex) {
         this.landmarkIndex = landmarkIndex;
     }
 
+    /**
+     * Returns distance
+     * @return distance
+     */
+    public int getDistance() {
+        return distance;
+    }
+
+    /**
+     * Gets the total distance of the trail
+     * @return the total distance
+     */
+    public int getTotalDistance() {
+        return totalDistance;
+    }
+
+    /**
+     * Used to set the current weather
+     * @param currentWeather
+     */
+    public void setCurrentWeather(String currentWeather) {
+        this.currentWeather = currentWeather;
+    }
+
+
+    /**
+     * This should update the distance depending on the pace the player chose
+     * @param pace
+     */
     public void updateDistance(int pace) {
         if (pace == 3) {this.distance = this.distance + 15;}
         if (pace == 2) {this.distance = this.distance + 10;}
@@ -114,10 +137,11 @@ public class Trail {
         if (pace == 0) {this.distance = this.distance + 0;}
     }
 
-    public void setRandomEventIndex(int randomEventIndex) {
-        this.randomEventIndex = randomEventIndex;
-    }
-
+    /**
+     * Used to generate a temperature based on the month, each month has a baseline
+     * and a value of 0-15 is chosen to be either added or subtracted to the baseline.
+     * @return temperature generated
+     */
     public int generateTemperature () {
         int temperature = 0;
         int temp1 = 0;
@@ -164,17 +188,36 @@ public class Trail {
         }
         return temperature;
     }
+
+    /**
+     * Accesses the generated temperature
+     * @return temperature
+     */
     public int getTemperature(){
         return  temperature;
     }
+
+    /**
+     * Sets the temperature
+     * @param temperature
+     */
     public void setTemperature(int temperature){
         this.temperature=temperature;
     }
 
+    /**
+     * Accesses the day count
+     * @return
+     */
     public int getDayCount() {
         return dayCount;
     }
 
+    /**
+     * Used to increment the day, currently each month is tracked as an assumed 30 days.
+     * After reaching 31 the day count is set to 1 and the month count is incremented. If the
+     * month is equal to 13 when incremented then it is set to 1 and the year is incremented instead.
+     */
     public void incrementDayCount(){
         int temp =0;
         dayCount++;
@@ -190,31 +233,55 @@ public class Trail {
         }
     }
 
+    /**
+     * gets the month count
+     * @return month
+     */
+
     public int getMonth() {
         return month;
     }
 
+    /**
+     * gets the year
+     * @return year
+     */
     public int getYear() {
         return year;
     }
+
+    /**
+     * sets the day count
+     * @param dayCount
+     */
 
     public void setDayCount(int dayCount) {
         this.dayCount = dayCount;
     }
 
+    /**
+     * sets the month
+     * @param month
+     */
+
     public void setMonth(int month) {
         this.month = month;
     }
 
+    /**
+     * sets the year
+     * @param year
+     */
     public void setYear(int year) {
         this.year = year;
     }
 
+    /**
+     * This method should simulate a day, generating weather, temperature
+     * and incrementing the day count. This method is really for ease of access as using this shortens down
+     * lines of code needed in main as this can be used rather than individually calling these methods.
+     */
     public void Day () {
-        //This method should simulate a day
-        //Rolls for weather, random events, temperature
-        //Food consumption and distance is updated
-        //Increments day and sets months/years accordingly to day count
         generateWeather();
         generateTemperature();
         updateDistance(wagon.getPace());
