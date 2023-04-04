@@ -2,6 +2,9 @@ package com.example.oregontrail;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,9 +20,15 @@ public class MainActivity extends AppCompatActivity {
     //then access the trail class to encounter the first obstacle / first day.
     //current weather and party health will be displayed in an "edittext" box
 
+    TextView OregonTrailTitleLabel = null;
 
+    EditText userOutputBox = null;
 
+    EditText userOutputStatsBox = null;
 
+    EditText userInputBox;
+
+    Button enterButton;
     // edited
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,16 +36,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //boxes listed from top down
-        final TextView OregonTrailTitleLabel = findViewById(R.id.OregonTrailTitleLabel);
+        OregonTrailTitleLabel = findViewById(R.id.OregonTrailTitleLabel);
 
-        final EditText userOutputBox = findViewById(R.id.userOutputBox);
+        userOutputBox = findViewById(R.id.userOutputBox);
 
-        final EditText userOutputStatsBox = findViewById(R.id.userOutputStatsBox);
+        userOutputStatsBox = findViewById(R.id.userOutputStatsBox);
 
-        final EditText userInputBox = findViewById(R.id.userInputBox);
+        userInputBox = findViewById(R.id.userInputBox);
 
-        
+        enterButton = findViewById(R.id.enterButton);
+
+        userOutputBox.setText("The Trail Starts off in Independence Missouri, your family consisting of You (Hattie Campbell), " +
+                "and your other party members want to travel to the west in search of opportunity. You will start out going to the local store to " +
+                "prepare for the trip. On the way there will be obstacles and hardship. You have saved up enough money to purchase some survival Items. Press 1 to start");
+
+
     }
+
+
+
+    public void btnClicked(View view){
+        Log.i("MainActivity", userInputBox.getText().toString());
+
+        if(Integer.parseInt(userInputBox.getText().toString()) == 1){
+
+            userOutputBox.setText("2");
+        }
+        else{
+            userOutputBox.setText("3");
+        }
+    }
+
 
 }
 
