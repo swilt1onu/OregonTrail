@@ -10,7 +10,7 @@ public class Party {
 
     //variables
     private int tPH = 0;
-    private String member1 = "member1";
+    private String member1 = "Hattie Campbell";
     private String member2 = "member2";
     private String member3 = "member3";
     private String member4 = "member4";
@@ -44,6 +44,21 @@ public class Party {
         }
         return Status;
     }
+    public String getMemeberName (int membernumber){
+        if (membernumber == 1){
+            return member1;
+        }
+        if (membernumber == 2) {
+            return member2;
+        }
+        if (membernumber == 3) {
+            return member3;
+        }
+        if (membernumber == 4) {
+            return member4;
+        }
+        else {return "Error: Please choose a party member 1-4";}
+}
 
 
 }

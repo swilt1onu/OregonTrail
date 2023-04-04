@@ -10,6 +10,9 @@ public class Trail {
      */
     public Trail(){}
     Random generator = new Random(System.currentTimeMillis());
+    Wagon wagon = new Wagon();
+    Items items = new Items();
+    Party party = new Party();
     //Variables
     private int landmarkIndex = 0;
     private String currentWeather = "Sunny";
@@ -23,6 +26,7 @@ public class Trail {
     private int year = 0; //Set by player
 
     private int totalDistance = 0; //Ideally set to the total distance of the trip
+    private int temperature = 0;
 
     //methods
     public void randomEvent (int randomEventIndex){
@@ -30,7 +34,7 @@ public class Trail {
         //lists and different events to be used by the index
     }
 
-    public String getCurrentWeather() {
+    public String generateWeather() {
         int temp;
         temp = generator.nextInt(100);
 
@@ -81,7 +85,7 @@ public class Trail {
         this.landmarkIndex = landmarkIndex;
     }
 
-    public void setDistance(int pace) {
+    public void updateDistance(int pace) {
         if (pace == 3) {this.distance = this.distance + 15;}
         if (pace == 2) {this.distance = this.distance + 10;}
         if (pace == 1) {this.distance = this.distance + 5;}
@@ -92,7 +96,7 @@ public class Trail {
         this.randomEventIndex = randomEventIndex;
     }
 
-    public int getTemperature () {
+    public int generateTemperature () {
         int temperature = 0;
         int temp1 = 0;
         int temp2 = 0;
@@ -138,12 +142,59 @@ public class Trail {
         }
         return temperature;
     }
+    public int getTemperature(){
+        return  temperature;
+    }
+    public void setTemperature(int temperature){
+        this.temperature=temperature;
+    }
+
+    public int getDayCount() {
+        return dayCount;
+    }
+
+    public void incrementDayCount(){
+        int temp =0;
+        if ((this.dayCount++) == 31) {
+            setDayCount(1);
+            temp = getMonth();
+            temp++;
+            if (temp > 12) {
+                temp = 1;
+                this.year++;
+            }
+            setMonth(temp);
+        }
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setDayCount(int dayCount) {
+        this.dayCount = dayCount;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 
     public void Day () {
         //This method should simulate a day
         //Rolls for weather, random events, temperature
         //Food consumption and distance is updated
         //Increments day and sets months/years accordingly to day count
-
+        generateWeather();
+        generateTemperature();
+        updateDistance(wagon.getPace());
+        incrementDayCount();
     }
 }

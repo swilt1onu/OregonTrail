@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText userInputBox = findViewById(R.id.userInputBox);
 
-        
     }
 
 }

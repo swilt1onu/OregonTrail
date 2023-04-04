@@ -6,7 +6,13 @@ public class Wagon {
      * default constructor
      * Creates a wagon object to be used in the game
      */
-    public Wagon(){}
+    public Wagon(){
+        int oxenCount = 4;
+        double weight = 0;
+        int[] itemCount = {0,0,0,0,0,0,0,0,0,0};
+        int pace = 0; //set by the player
+        int wallet = 0;
+    }
 
     //Variables
     public int oxenCount = 4;
