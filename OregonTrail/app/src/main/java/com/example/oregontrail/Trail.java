@@ -1,23 +1,31 @@
 package com.example.oregontrail;
-
 import java.util.Random;
 
+/**
+ *
+ *
+ *
+ *
+ */
 public class Trail {
 
 
-
     private int landmarkIndex = 0;
+    //variable for the current weather
     private String currentWeather = "Sunny";
+    //distance the player has traveled in a section
     private int distance = 0;
+    //index for a random event to occur
     private int randomEventIndex = 0;
-
+    //number of days that have passed in a month
     private int dayCount = 0;
-
+    //months number 0-12 in a year
     private int month = 0; //Set at the beginning
-
+    //year the player is in
     private int year = 0; //Set by player
-
-    private int totalDistance = 0; //Ideally set to the total distance of the trip
+    //total distance traveled in the trip
+    private int totalDistance = 0;
+    //temperature in fahrenheit outside (changes with the seasons/months)
     private int temperature = 0;
 
     Wagon wagon;

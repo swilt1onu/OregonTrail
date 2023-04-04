@@ -2,6 +2,7 @@ package com.example.oregontrail;
 
 public class Party {
     private int tPH = 0;
+    // the next 4 variables store the names of the members in the party 1-4
     private String member1 = "Hattie Campbell";
     private String member2 = "member2";
     private String member3 = "member3";
