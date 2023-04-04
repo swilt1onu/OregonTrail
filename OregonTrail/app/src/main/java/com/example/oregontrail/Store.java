@@ -29,7 +29,11 @@ public class Store {
     //array of objects that contains all the items to be accessed easier within the program
     Items[] itemsArray = {Food, Clothing,CookingItems,Oxen ,SpareWagonWheel ,MedKit ,Blankets , SewingKit,ExtraWagonTarp , FireStartingKit};
 
-    //subtracts the users total money from the cost of the item they are purchasing
+    /**
+     * subtracts the users total money from the cost of the item they are purchasing
+     * @param position the position in the array of that item(0-9).
+     * @param amountOfMoney the amount of money the player currently has
+     */
     public void moneyUsed(int position,int amountOfMoney){
         itemsArray[position].moneyUsed(amountOfMoney);
     }

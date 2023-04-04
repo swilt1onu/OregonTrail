@@ -26,41 +26,74 @@ public class Items {
         this.itemDescription = itemDescription;
     }
 
-    //method takes the money away from the players wallet when they buy items
+    /**
+     * method takes the money away from the players wallet when they buy items
+     * @param amountOfMoney amount of money the player currently has
+     */
     public void moneyUsed(double amountOfMoney){
         amountAvailable -= amountOfMoney;
     }
-    //gets cost
+
+    /**
+     * gets cost of the item
+     * @return cost of the item
+     */
     public double getCost() {
         return cost;
     }
-    //sets cost
+
+    /**
+     * sets cost of item
+     * @param cost cost of the item
+     */
     public void setCost(double cost) {
         this.cost = cost;
     }
-    //gets the amount available of the item
+
+    /**
+     * gets the amount available of the item
+     * @return the amount available of the item
+     */
     public double getAmountAvailable() {
         return amountAvailable;
     }
-    //sets the amount avaialbe of the item
+
+    /**
+     * sets the amount available of the item
+     * @param amountAvailable the amount available of the item
+     */
     public void setAmountAvailable(double amountAvailable) {
         this.amountAvailable = amountAvailable;
     }
 
-    //gets the item name
+    /**
+     * gets the item name
+     * @return the item name
+     */
     public String getItemName() {
         return itemName;
     }
-    //sets the item name
+
+    /**
+     * sets the name of the item
+     * @param itemName name of the item
+     */
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
 
-    //gets the item description
+    /**
+     * gets the item description
+     * @return the item description
+     */
     public String getItemDescription() {
         return itemDescription;
     }
-    //sets the item description
+
+    /**
+     * sets the item description
+     * @param itemDescription the description of the item
+     */
     public void setItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
     }
