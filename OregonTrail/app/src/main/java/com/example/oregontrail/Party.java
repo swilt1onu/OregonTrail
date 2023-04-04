@@ -1,14 +1,6 @@
 package com.example.oregontrail;
 
 public class Party {
-
-    public Party(){}
-
-    Trail trail = new Trail();
-    Wagon wagon = new Wagon();
-    Items items = new Items();
-
-    //variables
     private int tPH = 0;
     private String member1 = "Hattie Campbell";
     private String member2 = "member2";
@@ -18,6 +10,17 @@ public class Party {
     private int m2H = 0;
     private int m3H = 0;
     private int m4H = 0;
+
+    Wagon wagon;
+    public Party(){
+    }
+
+    public void setWagon(Wagon wagon){
+        this.wagon = wagon;
+    }
+
+
+    //variables
 
     //Methods
     public void settPH(int tPH){

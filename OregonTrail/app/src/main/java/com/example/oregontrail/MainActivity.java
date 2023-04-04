@@ -31,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
     EditText userInputBox;
 
     Button enterButton;
+
+    Trail trail;
+    Wagon wagon;
+
+    RandomEvent randomEvent;
+
+    Party party;
+
+
     // edited
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +61,14 @@ public class MainActivity extends AppCompatActivity {
                 "and your other party members want to travel to the west in search of opportunity. You will start out going to the local store to " +
                 "prepare for the trip. On the way there will be obstacles and hardship. You have saved up enough money to purchase some survival Items. Press 1 to start");
 
+        trail = new Trail();
+        wagon = new Wagon();
+        randomEvent = new RandomEvent();
+        party = new Party();
 
     }
 
-Trail trail = new Trail();
-    Wagon wagon = new Wagon();
-    RandomEvent event = new RandomEvent();
-    Party party = new Party();
+
 
 
     public void btnClicked(View view){
@@ -66,11 +76,11 @@ Trail trail = new Trail();
 
         if(Integer.parseInt(userInputBox.getText().toString()) == 1){
             trail.Day();
-            userOutputBox.setText("2");
-            userOutputStatsBox.setText("Weather: " + trail.getWeather() + "Date: " + trail.getDayCount() + "/" + trail.getMonth() "/" + trai);
+            userOutputBox.setText("User typed 1");
+            userOutputStatsBox.setText("Weather: " + trail.getWeather() + "Date: " + trail.getDayCount() + "/" + trail.getMonth() + "\nDistance Travel: " + trail.getDistance() );
         }
         else{
-            userOutputBox.setText("3");
+            userOutputBox.setText("error");
         }
     }
 

@@ -4,16 +4,8 @@ import java.util.Random;
 
 public class Trail {
 
-    /**
-     * default constructor
-     * Creates a trail object to be used in the game
-     */
-    public Trail(){}
-    Random generator = new Random(System.currentTimeMillis());
-    Wagon wagon = new Wagon();
-    Items items = new Items();
-    Party party = new Party();
-    //Variables
+
+
     private int landmarkIndex = 0;
     private String currentWeather = "Sunny";
     private int distance = 0;
@@ -28,16 +20,34 @@ public class Trail {
     private int totalDistance = 0; //Ideally set to the total distance of the trip
     private int temperature = 0;
 
+    Wagon wagon;
+    Random generator;
+    /**
+     * default constructor
+     * Creates a trail object to be used in the game
+     */
+    public Trail(){
+        generator = new Random(System.currentTimeMillis());
+        wagon = new Wagon();
+//        Items items = new Items();
+        Party party = new Party();
+        //Variables}
+    }
+
+
+
+
     //methods
     public void randomEvent (int randomEventIndex){
         //Should make a separate class for random events to store
         //lists and different events to be used by the index
     }
 
-    public String generateWeather() {
+    private String generateWeather() {
         int temp;
         temp = generator.nextInt(100);
 
+        // 5% change
         if ((temp % 20) == 0) {
             if (month > 10 || month < 4) {
                 currentWeather = "Snowing";
@@ -45,12 +55,16 @@ public class Trail {
                 currentWeather = "Raining";
             }
         }
+        // 1% chance
         if (temp == 0) {
             if (month > 10 || month < 4) {
                 currentWeather = "Blizzard";
             } else {
                 currentWeather = "Storm";
             }
+        }
+        else{
+            currentWeather = "Sunny";
         }
         return currentWeather;
     }
@@ -155,7 +169,8 @@ public class Trail {
 
     public void incrementDayCount(){
         int temp =0;
-        if ((this.dayCount++) == 31) {
+        dayCount++;
+        if (dayCount == 31) {
             setDayCount(1);
             temp = getMonth();
             temp++;

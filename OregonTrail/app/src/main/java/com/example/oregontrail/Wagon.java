@@ -18,7 +18,7 @@ public class Wagon {
     public int oxenCount = 4;
     private double weight = 0;
     private int[] itemCount = {0,0,0,0,0,0,0,0,0,0};
-    private int pace = 0; //set by the player
+    private int pace = 1; //set by the player
 
     private int wallet = 0;
 
