@@ -1,3 +1,4 @@
+package com.example.oregontrail;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,14 +55,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+Trail trail = new Trail();
+    Wagon wagon = new Wagon();
+    RandomEvent event = new RandomEvent();
+    Party party = new Party();
 
 
     public void btnClicked(View view){
         Log.i("MainActivity", userInputBox.getText().toString());
 
         if(Integer.parseInt(userInputBox.getText().toString()) == 1){
-
+            trail.Day();
             userOutputBox.setText("2");
+            userOutputStatsBox.setText("Weather: " + trail.getWeather() + "Date: " + trail.getDayCount() + "/" + trail.getMonth() "/" + trai);
         }
         else{
             userOutputBox.setText("3");
