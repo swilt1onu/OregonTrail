@@ -21,6 +21,10 @@ public class Items {
         this.itemDescription = itemDescription;
     }
 
+    public void moneyUsed(double amountOfMoney){
+        amountAvailable -= amountOfMoney;
+    }
+
 
     public double getCost() {
         return cost;
