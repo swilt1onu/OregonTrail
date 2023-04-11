@@ -107,6 +107,20 @@ public class Wagon {
         this.itemCount = itemCount;
     }
 
+    public void addItems(int itemIndex, int itemNum)
+    {
+        itemCount[itemIndex] += itemNum;
+    }
+
+    public void subtractItems(int itemIndex, int itemNum)
+    {
+        itemCount[itemIndex] -= itemNum;
+        if (itemCount[itemIndex] < 0){
+            itemCount[itemIndex] =0;
+        }
+    }
+
+
     /**
      * gets the amount of items the player has
      * @return the amount of items the player has

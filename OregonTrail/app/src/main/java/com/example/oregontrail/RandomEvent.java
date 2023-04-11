@@ -11,6 +11,8 @@ public class RandomEvent {
     public RandomEvent() {
     }
 
+    Trail trail;
+    Wagon wagon;
     //random event object used for rng
     Random rand = new Random(System.currentTimeMillis());
 
@@ -18,27 +20,42 @@ public class RandomEvent {
      * gets the name of the random event that occurs
      * @return the name of the random event that will occur
      */
-    public String getEvent(){
-        int temp = rand.nextInt(5);
-
-        if (temp == 0){
-            return "Event 0 has occurred";
-        }
+    public void getEventNumber(){
+        int temp = rand.nextInt(99);
+        temp++;
         if (temp == 1){
-            return "Event 1 has occurred";
+            //wrong trail
+            System.out.println("Your party took the wrong trail!");
+            trail.setDistance(trail.getDistance() - 10);
         }
-        if (temp == 2){
-            return "Event 2 has occurred";
+        if ((temp % 10) == 0){
+            //foraged food
+            wagon.addItems(0, rand.nextInt(20));
+            System.out.println("Your party foraged food!");
         }
-        if (temp == 3){
-            return "Event 3 has occurred";
+        if ((temp % 50) == 0){
+            //fire in the wagon
+            System.out.println("Wagon fire! Some items were lost....");
+            wagon.subtractItems(rand.nextInt(10), rand.nextInt(10));
+            wagon.subtractItems(rand.nextInt(10), rand.nextInt(10));
+            wagon.subtractItems(rand.nextInt(10), rand.nextInt(10));
         }
-        if (temp == 4){
-            return "Event 4 has occurred";
+        if ((temp % 7) == 0){
+            //storm/blizzard
+            if (trail.getTemperature() <= 32){System.out.println("A blizzard draws near! Your party hunkers down");}
+            else {System.out.print("A hail storm draws near! Your party hunkers down.");}
+            if (wagon.getPace() == 3) {trail.setDistance(trail.getDistance()-15);}
+            if (wagon.getPace() == 2) {trail.setDistance(trail.getDistance()-10);}
+            if (wagon.getPace() == 1) {trail.setDistance(trail.getDistance()-5);}
+            System.out.println("A days worth of travel is lost");
+
+        }
+        if (temp == 34){
+            //lose party member
         }
         if (temp == 5){
-            return "Event 5 has occurred";
+            //lose Ox
         }
-        else {return "Error occurred";}
+        else {return;}
     }
 }

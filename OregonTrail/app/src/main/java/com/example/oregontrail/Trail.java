@@ -109,6 +109,8 @@ public class Trail {
         return distance;
     }
 
+    public void setDistance(int distance){this.distance = distance;}
+
     /**
      * Gets the total distance of the trail
      * @return the total distance
