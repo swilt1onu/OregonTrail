@@ -27,6 +27,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.OregonTrail" >
         <activity
+            android:name="com.example.oregontrail.Intro"
+            android:exported="false" />
+        <activity
+            android:name="com.example.oregontrail.Store"
+            android:exported="false" />
+        <activity
             android:name="com.example.oregontrail.MainActivity"
             android:exported="true" >
             <intent-filter>

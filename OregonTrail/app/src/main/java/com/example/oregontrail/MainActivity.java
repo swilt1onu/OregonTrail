@@ -1,5 +1,7 @@
 package com.example.oregontrail;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.example.oregontrail.R;
+
+import java.io.Serializable;
 
 /**
  * Class: Main Activity
@@ -25,15 +29,8 @@ import com.example.oregontrail.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    //sets all the output or input boxes to null, as well as containing the enter button usage.
-    TextView OregonTrailTitleLabel = null;
-
-    EditText userOutputBox = null;
-
-    EditText userOutputStatsBox = null;
-
-    EditText userInputBox;
-
+    TextView weatherText;
+    TextView dayText;
     Button enterButton;
 
     //contains the other classes
@@ -41,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
     Wagon wagon;
 
     RandomEvent randomEvent;
-
     Party party;
+
+    private boolean isFirstTime = true;
 
 
     /**
@@ -55,20 +53,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //boxes listed from top down
-        OregonTrailTitleLabel = findViewById(R.id.OregonTrailTitleLabel);
+        isFirstTime = getIntent().getBooleanExtra("isFirstTime", true);
 
-        userOutputBox = findViewById(R.id.userOutputBox);
+        if (isFirstTime){
+            Intent intent = new Intent(this, Intro.class);
+            intent.putExtra("Main Activity", this.getClass());
+            startActivity(intent);
+            return;
+        }
 
-        userOutputStatsBox = findViewById(R.id.userOutputStatsBox);
-
-        userInputBox = findViewById(R.id.userInputBox);
-
+        weatherText = findViewById(R.id.weatherText);
+        dayText = findViewById(R.id.dayText);
         enterButton = findViewById(R.id.enterButton);
-
-        userOutputBox.setText("The Trail Starts off in Independence Missouri, your family consisting of You (Hattie Campbell), " +
-                "and your other party members want to travel to the west in search of opportunity. You will start out going to the local store to " +
-                "prepare for the trip. On the way there will be obstacles and hardship. You have saved up enough money to purchase some survival Items. Press 1 to start");
 
         //instantiates the needed classes that will interact with main
         trail = new Trail();
@@ -76,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         randomEvent = new RandomEvent();
         party = new Party();
 
+        weatherText.setText(trail.getWeather());
     }
 
 
@@ -86,18 +83,9 @@ public class MainActivity extends AppCompatActivity {
      * @param view - Variable for the view button
      */
     public void btnClicked(View view){
-        Log.i("MainActivity", userInputBox.getText().toString());
-
-        //checks to see if the user has typed 1 to start the game.
-        if(Integer.parseInt(userInputBox.getText().toString()) == 1){
-            //accessor for the day function in trail class
-            trail.Day();
-            userOutputBox.setText("User typed 1");
-            userOutputStatsBox.setText("Weather: " + trail.getWeather() + "Date: " + trail.getDayCount() + "/" + trail.getMonth() + "\nDistance Travel: " + trail.getDistance() );
-        }
-        else{
-            userOutputBox.setText("error");
-        }
+        trail.day();
+        weatherText.setText(trail.getWeather());
+        dayText.setText(String.valueOf(trail.getDayCount()));
     }
 
 

@@ -2942,12 +2942,14 @@ id custom
 id customPanel
 id cut
 id date_picker_actions
+id dayText
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id descriptionText
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3026,6 +3028,7 @@ id immediateStop
 id included
 id indeterminate
 id info
+id introBtn
 id invisible
 id inward
 id italic
@@ -3224,6 +3227,7 @@ id startVertical
 id staticLayout
 id staticPostLayout
 id stop
+id storeBtn
 id stretch
 id submenuarrow
 id submit_area
@@ -3242,6 +3246,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id testText
 id text
 id text2
 id textEnd
@@ -3249,6 +3254,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3261,6 +3268,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleText
 id title_template
 id toggle
 id top
@@ -3279,9 +3287,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userInputBox
-id userOutputBox
-id userOutputStatsBox
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3291,6 +3296,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id weatherText
 id west
 id withText
 id with_icon
@@ -3423,6 +3429,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout intro
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3483,6 +3490,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout store
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -3527,6 +3535,7 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string description
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -3642,6 +3651,7 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string title
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

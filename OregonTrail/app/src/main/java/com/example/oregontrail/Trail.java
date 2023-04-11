@@ -281,7 +281,7 @@ public class Trail {
      * and incrementing the day count. This method is really for ease of access as using this shortens down
      * lines of code needed in main as this can be used rather than individually calling these methods.
      */
-    public void Day () {
+    public void day () {
         generateWeather();
         generateTemperature();
         updateDistance(wagon.getPace());
