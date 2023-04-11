@@ -17,14 +17,14 @@ public class Store {
 
     Items Food = new Items(.05, 2000, "Food0", "food description");
     Items Clothing = new Items(.40, 8, "Clothing1", "Clothing Description");
-    Items CookingItems = new Items(1, 20, "CookingItems2", "Cooking Item Description" );
-    Items Oxen = new Items(30, 6, "Oxen", " Oxen Description3");
-    Items SpareWagonWheel = new Items(8, 3, "SpareWagonWheel4", "SpareWagonWheel Description");
+    Items CookingItems = new Items(.25, 10, "CookingItems2", "Cooking Item Description" );
+    Items Oxen = new Items(30, 4, "Oxen", " Oxen Description3");
+    Items SpareWagonWheel = new Items(8, 1, "SpareWagonWheel4", "SpareWagonWheel Description");
     Items MedKit = new Items(3, 1, "Medkit5", "Medkit Description");
-    Items Blankets = new Items(.50, 6, "Blankets6", "Blanket Description");
+    Items Blankets = new Items(.50, 2, "Blankets6", "Blanket Description");
     Items SewingKit = new Items(2, 1, "SewingKit7", "SewingKit Description" );
     Items ExtraWagonTarp = new Items(3, 2, "ExtraWagonTarp8", "Description extrawagontarp");
-    Items FireStartingKit = new Items(.30, 4, "FireStartingKit9", "fireStartingKit description");
+    Items FireStartingKit = new Items(.30, 2, "FireStartingKit9", "fireStartingKit description");
 
     //array of objects that contains all the items to be accessed easier within the program
     Items[] itemsArray = {Food, Clothing,CookingItems,Oxen ,SpareWagonWheel ,MedKit ,Blankets , SewingKit,ExtraWagonTarp , FireStartingKit};

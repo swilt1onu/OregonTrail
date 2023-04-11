@@ -31,6 +31,7 @@ public class Items {
      * @param amountOfMoney amount of money the player currently has
      */
     public void moneyUsed(double amountOfMoney){
+        
         amountAvailable -= amountOfMoney;
     }
 
