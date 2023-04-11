@@ -36,9 +36,9 @@ public class RandomEvent {
         if ((temp % 50) == 0){
             //fire in the wagon
             System.out.println("Wagon fire! Some items were lost....");
-            wagon.subtractItems(rand.nextInt(10), rand.nextInt(10));
-            wagon.subtractItems(rand.nextInt(10), rand.nextInt(10));
-            wagon.subtractItems(rand.nextInt(10), rand.nextInt(10));
+            wagon.subtractItems(rand.nextInt(10), rand.nextInt(3));
+            wagon.subtractItems(rand.nextInt(10), rand.nextInt(3));
+            wagon.subtractItems(rand.nextInt(10), rand.nextInt(3));
         }
         if ((temp % 7) == 0){
             //storm/blizzard
@@ -51,7 +51,10 @@ public class RandomEvent {
 
         }
         if (temp == 34){
-            //lose party member
+            //lose party member, needs more of the party class setup beforehand
+         //  int temp2 = rand.nextInt(2) + 2;
+         //  if (temp2 == 2)
+
         }
         if (temp == 5){
             //lose Ox
