@@ -8,6 +8,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">OregonTrail</string>
+    <string name="description">
+        The Trail Starts off in Independence Missouri, your family consisting of You (Hattie Campbell), and your other party members want to travel to the west in search of opportunity. You will start out going to the local store to prepare for the trip. On the way there will be obstacles and hardship. You have saved up enough money to purchase some survival Items. Press 1 to start
+    </string>
+    <string name="title">Oregon Trail</string>
     <style name="Theme.OregonTrail" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

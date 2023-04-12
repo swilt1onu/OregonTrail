@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OregonTrail</string>
+    <string name="title">Oregon Trail</string>
+    <string name="description">
+        The Trail Starts off in Independence Missouri, your family consisting of You (Hattie Campbell), and your other party members want to travel to the west in search of opportunity. You will start out going to the local store to prepare for the trip. On the way there will be obstacles and hardship. You have saved up enough money to purchase some survival Items. Press 1 to start
+    </string>
 </resources>
