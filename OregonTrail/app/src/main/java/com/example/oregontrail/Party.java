@@ -25,6 +25,8 @@ public class Party {
      //to be used in this class
     Wagon wagon;
 
+    Trail trail;
+
     /**
      * Default Constructor
      */
@@ -96,5 +98,19 @@ public class Party {
         else {return "Error: Please choose a party member 1-4";}
 }
 
+    /**
+     * Used to update health daily
+     */
+    public void updateHealth (int memberHealth){
+
+        memberHealth = memberHealth - (memberHealth/10);
+
+        int Pace = wagon.getPace();
+        if (Pace == 1) { memberHealth += 2;}
+        if (Pace == 2) { memberHealth += 4;}
+        if (Pace == 3) { memberHealth += 6;}
+
+
+    }
 
 }
