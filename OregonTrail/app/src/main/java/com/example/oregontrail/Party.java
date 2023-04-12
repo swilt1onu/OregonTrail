@@ -20,6 +20,12 @@ public class Party {
     private int m3H = 0;
     private int m4H = 0;
 
+    //Tracks if a party member is diseased
+    private boolean m1D = false;
+    private boolean m2D = false;
+    private boolean m3D = false;
+    private boolean m4D = false;
+
 
      //Makes a reference to the wagon class which allows the methods
      //to be used in this class
@@ -101,15 +107,22 @@ public class Party {
     /**
      * Used to update health daily
      */
-    public void updateHealth (int memberHealth){
+    public void updateHealth (int memberHealth, boolean memberDisease){
 
         memberHealth = memberHealth - (memberHealth/10);
 
-        int Pace = wagon.getPace();
-        if (Pace == 1) { memberHealth += 2;}
-        if (Pace == 2) { memberHealth += 4;}
-        if (Pace == 3) { memberHealth += 6;}
+        int pace = wagon.getPace();
+        if (pace == 1) { memberHealth += 2;}
+        if (pace == 2) { memberHealth += 4;}
+        if (pace == 3) { memberHealth += 6;}
 
+        int temp = trail.getTemperature();
+        if (temp >= 85) {memberHealth += 2;}
+        if (temp <= 15) {memberHealth += 3;}
+
+        if (memberDisease) { memberHealth += 7;}
+
+        //Should also implement a counter for food ration
 
     }
 

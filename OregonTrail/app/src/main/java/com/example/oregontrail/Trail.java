@@ -150,7 +150,7 @@ public class Trail {
         int temp2 = 0;
         if (month > 11 && month < 3) {
             temperature = 20;
-            temp1 = generator.nextInt(15);
+            temp1 = generator.nextInt(20);
             temp2 = generator.nextInt(2);
             if ((temp2 % 2) == 0) {
                 temperature -= temp1;
@@ -160,7 +160,7 @@ public class Trail {
         }
         if (month > 2 && month < 6) {
             temperature = 50;
-            temp1 = generator.nextInt(15);
+            temp1 = generator.nextInt(25);
             temp2 = generator.nextInt(2);
             if ((temp2 % 2) == 0) {
                 temperature -= temp1;
@@ -170,7 +170,7 @@ public class Trail {
         }
         if (month > 5 && month < 9) {
             temperature = 70;
-            temp1 = generator.nextInt(15);
+            temp1 = generator.nextInt(25);
             temp2 = generator.nextInt(2);
             if ((temp2 % 2) == 0) {
                 temperature -= temp1;
@@ -180,7 +180,7 @@ public class Trail {
         }
         if (month > 8 && month < 12) {
             temperature = 40;
-            temp1 = generator.nextInt(15);
+            temp1 = generator.nextInt(25);
             temp2 = generator.nextInt(2);
             if ((temp2 % 2) == 0) {
                 temperature -= temp1;
