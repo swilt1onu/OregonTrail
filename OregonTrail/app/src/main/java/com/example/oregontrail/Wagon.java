@@ -19,14 +19,23 @@ public class Wagon {
 
     //Variable for the number of oxen
     public int oxenCount = 4;
+
     //weight of everything in the wagon
     private double weight = 0;
+
     //keeps track of the amount of items the party has and its index
     private int[] itemCount = {0,0,0,0,0,0,0,0,0,0};
+
     //set by the player (how fast they are moving)
     private int pace = 1;
+
     //amount of money the party has
     private int wallet = 0;
+
+    // ration size
+    private int ration = 0;
+
+    Party party;
 
     /**
      * Sets the pace of the party which affects how much they are able to move each day
@@ -152,5 +161,46 @@ public class Wagon {
     public void setOxenCount(int oxenCount) {
         this.oxenCount = oxenCount;
     }
+
+    /**
+     * Sets the ration size of the party, set by the player
+     * to control how much food is eaten
+     * @param ration size of ration on a 0-3 scale
+     */
+    public void setRation(int ration) {
+        if (ration > 3 || ration < 0) {
+            System.out.println("Please select 0-3.");
+        }
+        else {this.ration = ration;}
+    }
+
+    /**
+     * gets the ration size
+     * return ration
+     */
+    public int getRation(){
+        return this.ration;
+    }
+
+    /**
+     * Consumes food based on the ration size
+     * @param ration size of ration
+     */
+    public void meal (int ration){
+        if (ration == 3) {
+            itemCount[0] = itemCount[0] - (party.getMemberCount() * 6);
+        }
+        if (ration == 2) {
+            itemCount[0] = itemCount[0] - (party.getMemberCount() * 4);
+        }
+        if (ration == 1) {
+            itemCount[0] = itemCount[0] - (party.getMemberCount() * 2);
+        }
+        if (ration == 0) {
+            itemCount[0] = itemCount[0] - (party.getMemberCount() * 0);
+        }
+        if (itemCount[0] <= 0) { setRation(0); itemCount[0] = 0;}
+    }
+
 }
 

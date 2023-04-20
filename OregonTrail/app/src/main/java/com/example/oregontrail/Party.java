@@ -21,10 +21,16 @@ public class Party {
     private int m4H = 0;
 
     //Tracks if a party member is diseased
-    private boolean m1D = false;
-    private boolean m2D = false;
-    private boolean m3D = false;
-    private boolean m4D = false;
+    private boolean m1Ill = false;
+    private boolean m2Ill = false;
+    private boolean m3Ill = false;
+    private boolean m4Ill = false;
+
+    //Tracks if a party member is dead
+    private boolean m1Dead = false;
+    private boolean m2Dead = false;
+    private boolean m3Dead = false;
+    private boolean m4Dead = false;
 
 
      //Makes a reference to the wagon class which allows the methods
@@ -103,9 +109,23 @@ public class Party {
         }
         else {return "Error: Please choose a party member 1-4";}
 }
+    /**
+     * used to get the total number of party members
+     * @return number of members
+     */
+    public int getMemberCount(){
+        int partyCount = 0;
+        if (!m1Dead) { partyCount++;}
+        if (!m2Dead) { partyCount++;}
+        if (!m3Dead) { partyCount++;}
+        if (!m4Dead) { partyCount++;}
+        return partyCount;
+    }
 
     /**
      * Used to update health daily
+     * @param memberDisease checks for if the member is diseased
+     * @param memberHealth uses the current health value to update
      */
     public void updateHealth (int memberHealth, boolean memberDisease){
 
@@ -122,7 +142,10 @@ public class Party {
 
         if (memberDisease) { memberHealth += 7;}
 
-        //Should also implement a counter for food ration
+        if (wagon.getRation() == 3) {memberHealth += 0;}
+        if (wagon.getRation() == 2) {memberHealth += 4;}
+        if (wagon.getRation() == 1) {memberHealth += 8;}
+        if (wagon.getRation() == 0) {memberHealth += 12;}
 
     }
 
