@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.example.oregontrail.app-merged_res-29:/layout_intro.xml.flat",
-        "source": "com.example.oregontrail.app-main-31:/layout/intro.xml"
-    },
-    {
         "merged": "C:\\Users\\lava1\\.gradle\\daemon\\7.5\\com.example.oregontrail.app-merged_res-29:\\layout_intro.xml.flat",
         "source": "C:\\Users\\lava1\\.gradle\\daemon\\7.5\\com.example.oregontrail.app-main-31:\\layout\\intro.xml"
     },
@@ -64,8 +60,8 @@
         "source": "C:\\Users\\lava1\\.gradle\\daemon\\7.5\\com.example.oregontrail.app-main-31:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.oregontrail.app-merged_res-29:/layout_activity_main.xml.flat",
-        "source": "com.example.oregontrail.app-main-31:/layout/activity_main.xml"
+        "merged": "com.example.oregontrail.app-merged_res-29:/layout_store.xml.flat",
+        "source": "com.example.oregontrail.app-main-31:/layout/store.xml"
     },
     {
         "merged": "C:\\Users\\lava1\\.gradle\\daemon\\7.5\\com.example.oregontrail.app-merged_res-29:\\mipmap-hdpi_ic_launcher_round.webp.flat",

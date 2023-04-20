@@ -6,24 +6,187 @@
     android:layout_height="match_parent"
     tools:context=".Store">
 
-    <TextView
-        android:id="@+id/testText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food +1" />
+
+            <Button
+                android:id="@+id/ButtonClothing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clothing +1" />
+
+            <Button
+                android:id="@+id/buttonCookingItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CookingItems +1" />
+
+            <Button
+                android:id="@+id/buttonOxen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oxen +1" />
+
+            <Button
+                android:id="@+id/buttonSpareWagonWheel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SpareWheel +1" />
+
+            <Button
+                android:id="@+id/buttonMedKit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MedKit +1" />
+
+            <Button
+                android:id="@+id/buttonBlankets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blankets +1" />
+
+            <Button
+                android:id="@+id/buttonSewingKit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SewingKit +1" />
+
+            <Button
+                android:id="@+id/buttonExtraWagonTarp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ExtraTarp +1" />
+
+            <Button
+                android:id="@+id/buttonFireStartingKit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FireStartingKit +1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="208dp"
+            android:layout_height="480dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewFood"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewClothing"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewCookingItems"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewOxen"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewSpareWagonWheel"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewMedKit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewBlankets"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewSewingKit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewExtraWagonTarp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewFireStartingKit"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:text="TextView"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/storeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="651dp"
         android:layout_marginBottom="32dp"
-        android:text="Next"
         android:onClick="storeBtnClicked"
+        android:text="Leave Store"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="621dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="80dp"
+        android:layout_weight="1"
+        android:text="Wallet: "
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

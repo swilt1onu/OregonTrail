@@ -21,8 +21,21 @@ import com.example.oregontrail.Items;
  */
 public class Store extends AppCompatActivity {
 
-    TextView testText;
+    TextView textViewFood;
+    TextView textViewClothing;
+    TextView textViewCookingItems;
+    TextView textViewOxen;
+    TextView textViewSpareWagonWheel;
+    TextView textViewMedKit;
+    TextView textViewBlankets;
+    TextView textViewSewingKit;
+    TextView textViewExtraWagonTarp;
+    TextView textViewFireStartingKit;
 
+
+
+
+//Creates the items in the store
     Items Food = new Items(20, 1, "Food0", "food description");
     Items Clothing = new Items(3.2, 1, "Clothing1", "Clothing Description");
     Items CookingItems = new Items(2.5, 1, "CookingItems2", "Cooking Item Description" );
@@ -39,13 +52,42 @@ public class Store extends AppCompatActivity {
 
     boolean playerExitStore = false;
 
+    //is created when the store is created.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.store);
 
-        testText = findViewById(R.id.testText);
-        testText.setText("Store Created");
+        textViewFood = findViewById(R.id.textViewFood);
+        textViewClothing = findViewById(R.id.textViewClothing);
+        textViewCookingItems = findViewById(R.id.textViewCookingItems);
+        textViewOxen = findViewById(R.id.textViewOxen);
+        textViewSpareWagonWheel = findViewById(R.id.textViewSpareWagonWheel);
+        textViewMedKit = findViewById(R.id.textViewMedKit);
+        textViewBlankets = findViewById(R.id.textViewBlankets);
+        textViewSewingKit = findViewById(R.id.textViewSewingKit);
+        textViewExtraWagonTarp = findViewById(R.id.textViewExtraWagonTarp);
+        textViewFireStartingKit = findViewById(R.id.textViewFireStartingKit);
+
+
+        textViewFood.setText("cost/lb: $1");
+        textViewClothing.setText("cost/lb: $7");
+        textViewCookingItems.setText("cost/lb: $5");
+        textViewOxen.setText("cost/1: $50");
+        textViewSpareWagonWheel.setText("cost: $20");
+        textViewMedKit.setText("cost/lb: 3");
+        textViewBlankets.setText("cost/lb: 2");
+        textViewSewingKit.setText("cost/lb: 4");
+        textViewExtraWagonTarp.setText("cost/1: $12");
+        textViewFireStartingKit.setText("cost/lb: $7");
+
+
+
+
+
     }
+
+
+
 
     // when storeBtn is clicked, it will go back to main activity
     public void storeBtnClicked(View view){

@@ -2806,6 +2806,7 @@ drawable tooltip_frame_light
 id ALT
 id BOTTOM_END
 id BOTTOM_START
+id ButtonClothing
 id CTRL
 id FUNCTION
 id META
@@ -2902,7 +2903,16 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id buttonBlankets
+id buttonCookingItems
+id buttonExtraWagonTarp
+id buttonFireStartingKit
+id buttonFood
+id buttonMedKit
+id buttonOxen
 id buttonPanel
+id buttonSewingKit
+id buttonSpareWagonWheel
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3043,6 +3053,7 @@ id legacy
 id line1
 id line3
 id linear
+id linearLayout2
 id listMode
 id list_item
 id m3_side_sheet
@@ -3246,7 +3257,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id testText
 id text
 id text2
 id textEnd
@@ -3256,6 +3266,16 @@ id textStart
 id textTop
 id textView
 id textView2
+id textViewBlankets
+id textViewClothing
+id textViewCookingItems
+id textViewExtraWagonTarp
+id textViewFireStartingKit
+id textViewFood
+id textViewMedKit
+id textViewOxen
+id textViewSewingKit
+id textViewSpareWagonWheel
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
