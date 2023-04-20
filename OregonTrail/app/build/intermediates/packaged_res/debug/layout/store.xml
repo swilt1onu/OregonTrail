@@ -27,61 +27,61 @@
                 android:id="@+id/buttonFood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Food" />
+                android:text="Food +1" />
 
             <Button
                 android:id="@+id/ButtonClothing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Clothing" />
+                android:text="Clothing +1" />
 
             <Button
                 android:id="@+id/buttonCookingItems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="CookingItems" />
+                android:text="CookingItems +1" />
 
             <Button
                 android:id="@+id/buttonOxen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Oxen" />
+                android:text="Oxen +1" />
 
             <Button
                 android:id="@+id/buttonSpareWagonWheel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SpareWagonWheel" />
+                android:text="SpareWheel +1" />
 
             <Button
                 android:id="@+id/buttonMedKit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MedKit" />
+                android:text="MedKit +1" />
 
             <Button
                 android:id="@+id/buttonBlankets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Blankets" />
+                android:text="Blankets +1" />
 
             <Button
                 android:id="@+id/buttonSewingKit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SewingKit" />
+                android:text="SewingKit +1" />
 
             <Button
                 android:id="@+id/buttonExtraWagonTarp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ExtraWagonTarp" />
+                android:text="ExtraTarp +1" />
 
             <Button
                 android:id="@+id/buttonFireStartingKit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FireStartingKit" />
+                android:text="FireStartingKit +1" />
         </LinearLayout>
 
         <LinearLayout

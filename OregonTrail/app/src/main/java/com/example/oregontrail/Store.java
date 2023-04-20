@@ -32,7 +32,7 @@ public class Store extends AppCompatActivity {
     TextView textViewExtraWagonTarp;
     TextView textViewFireStartingKit;
 
-
+    TextView textViewWalletAndWeight;
 
 
 //Creates the items in the store
@@ -50,7 +50,8 @@ public class Store extends AppCompatActivity {
     //array of objects that contains all the items to be accessed easier within the program
     Items[] itemsArray = {Food, Clothing,CookingItems,Oxen ,SpareWagonWheel ,MedKit ,Blankets , SewingKit,ExtraWagonTarp , FireStartingKit};
 
-    boolean playerExitStore = false;
+
+
 
     //is created when the store is created.
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,7 @@ public class Store extends AppCompatActivity {
         textViewSewingKit = findViewById(R.id.textViewSewingKit);
         textViewExtraWagonTarp = findViewById(R.id.textViewExtraWagonTarp);
         textViewFireStartingKit = findViewById(R.id.textViewFireStartingKit);
-
+        textViewWalletAndWeight = findViewById(R.id.textViewWalletAndWeight);
 
         textViewFood.setText("cost/lb: $1");
         textViewClothing.setText("cost/lb: $7");
@@ -79,14 +80,19 @@ public class Store extends AppCompatActivity {
         textViewSewingKit.setText("cost/lb: 4");
         textViewExtraWagonTarp.setText("cost/1: $12");
         textViewFireStartingKit.setText("cost/lb: $7");
-
-
-
-
+        textViewWalletAndWeight.setText("Wallet: " + Wagon.getWallet + " Weight: " + Wagon.getWeight);
 
     }
 
 
+    public void FoodButtonClicked(View view){
+        if(Wagon.getWallet >= 1 && Wagon.getWeight >= 1){
+            //the array for items increments by 1
+            Wagon.addItems(0,1);
+            Wagon.setWeight(?)
+            textViewWalletAndWeight.setText("Wallet: " + Wagon.getWallet + " Weight: " + Wagon.getWeight);
+        }
+    }
 
 
     // when storeBtn is clicked, it will go back to main activity
