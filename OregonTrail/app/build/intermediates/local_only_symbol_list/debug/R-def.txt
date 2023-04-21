@@ -38,6 +38,7 @@ id textViewMedKit
 id textViewOxen
 id textViewSewingKit
 id textViewSpareWagonWheel
+id textViewWalletAndWeight
 id titleText
 id weatherText
 layout activity_main

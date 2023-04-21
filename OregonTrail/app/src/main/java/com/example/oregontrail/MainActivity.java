@@ -51,16 +51,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         isFirstTime = getIntent().getBooleanExtra("isFirstTime", true);
 
         if (isFirstTime){
             Intent intent = new Intent(this, Intro.class);
-            intent.putExtra("Main Activity", this.getClass());
             startActivity(intent);
             return;
         }
+
+        wagon = (Wagon) getIntent().getSerializableExtra("wagon object");
+
+        setContentView(R.layout.activity_main);
 
         weatherText = findViewById(R.id.weatherText);
         dayText = findViewById(R.id.dayText);
@@ -68,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         //instantiates the needed classes that will interact with main
         trail = new Trail();
-        wagon = new Wagon();
-        randomEvent = new RandomEvent();
+        randomEvent = new RandomEvent(wagon);
         party = new Party();
 
         weatherText.setText(trail.getWeather());
@@ -87,6 +88,4 @@ public class MainActivity extends AppCompatActivity {
         weatherText.setText(trail.getWeather());
         dayText.setText(String.valueOf(trail.getDayCount()));
     }
-
-
 }

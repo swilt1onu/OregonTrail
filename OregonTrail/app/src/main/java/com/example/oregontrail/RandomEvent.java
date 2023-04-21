@@ -5,16 +5,17 @@ import java.util.Random;
  * allows for random events to occur, uses the percent chance and rng to find out what will happen
  */
 public class RandomEvent {
-    /**
-     * default constructor for the random event class
-     */
-    public RandomEvent() {
-    }
-
     Trail trail;
     Wagon wagon;
     //random event object used for rng
     Random rand = new Random(System.currentTimeMillis());
+
+    /**
+     * default constructor for the random event class
+     */
+    public RandomEvent(Wagon wagon) {
+        this.wagon = wagon;
+    }
 
     /**
      * gets the name of the random event that occurs

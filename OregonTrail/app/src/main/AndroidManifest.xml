@@ -15,7 +15,7 @@
             android:name=".Intro"
             android:exported="false"/>
         <activity
-            android:name=".Store"
+            android:name=".StoreActivity"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"

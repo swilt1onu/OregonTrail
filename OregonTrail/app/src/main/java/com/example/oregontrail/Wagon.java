@@ -1,41 +1,50 @@
 package com.example.oregontrail;
 
+import java.io.Serializable;
+
 /**
  *stores the stats of the characters and party
  */
-public class Wagon {
+public class Wagon implements Serializable {
+    Party party;
+
+    private final int MAX_WEIGHT = 200;
+
+    private int oxenCount;
+
+    //weight of everything in the wagon
+    private double weight;
+
+    //keeps track of the amount of items the party has and its index
+    private int[] itemCount = {0,0,0,0,0,0,0,0,0,0};
+    private int[] itemCost = {1,7,5,50,20,3,2,4,12,7};
+    private int[] itemWeight = {1,1,1,0,30,1,1,1,2,1};
+
+    //set by the player (how fast they are moving)
+    private int pace;
+
+    //amount of money the party has
+    private int wallet;
+
+    // ration size
+    private int ration;
+
 
     /**
      * default constructor
      * Creates a wagon object to be used in the game
      */
     public Wagon(){
-        int oxenCount = 4;
-        double weight = 0;
-        int[] itemCount = {0,0,0,0,0,0,0,0,0,0};
-        int pace = 0; //set by the player
-        int wallet = 0;
+        oxenCount = 4;
+        weight = 0;
+        pace = 1; //set by the player
+        wallet = 200;
     }
 
-    //Variable for the number of oxen
-    public int oxenCount = 4;
+    public Boolean canPurchase(int itemIndex, int itemNum){
+        return (wallet - itemCost[itemIndex]*itemNum >= 0 && weight + itemWeight[itemIndex]*itemNum <= MAX_WEIGHT);
+    }
 
-    //weight of everything in the wagon
-    private double weight = 0;
-
-    //keeps track of the amount of items the party has and its index
-    private int[] itemCount = {0,0,0,0,0,0,0,0,0,0};
-
-    //set by the player (how fast they are moving)
-    private int pace = 1;
-
-    //amount of money the party has
-    private int wallet = 0;
-
-    // ration size
-    private int ration = 0;
-
-    Party party;
 
     /**
      * Sets the pace of the party which affects how much they are able to move each day
@@ -64,9 +73,14 @@ public class Wagon {
         }
     }
 
+    // add the weight
+    public void addWeight(int weight){
+        this.weight += weight;
+    }
+
     /**
      * gets the weight of everything in the wagon
-     * @return weight of everthing in the wagon
+     * @return weight of everything in the wagon
      */
     public double getWeight() {
         return weight;
@@ -75,21 +89,29 @@ public class Wagon {
     /**
      * sets the weight of everything on the wagon
      */
-    public void setWeight(){
-        double temp = 0;
-        for (int i = 0; i <= 10; i++){
-            temp = itemCount[i]; // * itemWeight[i]; yet to be added
-        }
-        this.weight = temp;
-    }
+//    public void setWeight(){
+//        double temp = 0;
+//        for (int i = 0; i <= 10; i++){
+//            temp = itemCount[i]; // * itemWeight[i]; yet to be added
+//        }
+//        this.weight = temp;
+//    }
 
     /**
      *
      * @param itemIndex index number of the item
      * @return the item count as an array
      */
-    public int getitemCount(int itemIndex){
+    public int getItemCount(int itemIndex){
         return itemCount[itemIndex];
+    }
+
+    public int getItemCost(int itemIndex){
+        return itemCost[itemIndex];
+    }
+
+    public int getItemWeight(int itemIndex){
+        return itemWeight[itemIndex];
     }
 
     /**
@@ -104,9 +126,9 @@ public class Wagon {
      * sets the amount of money the party has
      * @param wallet the amount of money the party has
      */
-    public void setWallet(int wallet) {
-        this.wallet = wallet;
-    }
+//    public void setWallet(int wallet) {
+//        this.wallet = wallet;
+//    }
 
     /**
      * sets the itemcount of the party
@@ -118,6 +140,8 @@ public class Wagon {
 
     public void addItems(int itemIndex, int itemNum)
     {
+        wallet -= itemCost[itemIndex]*itemNum;
+        weight += itemWeight[itemIndex]*itemNum;
         itemCount[itemIndex] += itemNum;
     }
 

@@ -103,12 +103,12 @@ ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\
 		ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\src\main\AndroidManifest.xml:16:13-37
 	android:name
 		ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\src\main\AndroidManifest.xml:15:13-34
-activity#com.example.oregontrail.Store
+activity#com.example.oregontrail.StoreActivity
 ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\src\main\AndroidManifest.xml:17:9-19:39
 	android:exported
 		ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\src\main\AndroidManifest.xml:19:13-37
 	android:name
-		ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\src\main\AndroidManifest.xml:18:13-34
+		ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\src\main\AndroidManifest.xml:18:13-42
 activity#com.example.oregontrail.MainActivity
 ADDED from C:\Users\lava1\OneDrive\Documents\GitHub\OregonTrail\OregonTrail\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:exported

@@ -30,7 +30,7 @@
             android:name="com.example.oregontrail.Intro"
             android:exported="false" />
         <activity
-            android:name="com.example.oregontrail.Store"
+            android:name="com.example.oregontrail.StoreActivity"
             android:exported="false" />
         <activity
             android:name="com.example.oregontrail.MainActivity"

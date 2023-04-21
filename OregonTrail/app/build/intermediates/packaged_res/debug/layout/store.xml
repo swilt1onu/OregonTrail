@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Store">
+    tools:context=".StoreActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -27,60 +27,70 @@
                 android:id="@+id/buttonFood"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="foodButtonClicked"
                 android:text="Food +1" />
 
             <Button
                 android:id="@+id/ButtonClothing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="clothesButtonClicked"
                 android:text="Clothing +1" />
 
             <Button
                 android:id="@+id/buttonCookingItems"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="cookingItemsButtonClicked"
                 android:text="CookingItems +1" />
 
             <Button
                 android:id="@+id/buttonOxen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="oxenButtonClicked"
                 android:text="Oxen +1" />
 
             <Button
                 android:id="@+id/buttonSpareWagonWheel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="spareWheelButtonClicked"
                 android:text="SpareWheel +1" />
 
             <Button
                 android:id="@+id/buttonMedKit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="medKitButtonClicked"
                 android:text="MedKit +1" />
 
             <Button
                 android:id="@+id/buttonBlankets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="blanketButtonClicked"
                 android:text="Blankets +1" />
 
             <Button
                 android:id="@+id/buttonSewingKit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="sewingKitButtonClicked"
                 android:text="SewingKit +1" />
 
             <Button
                 android:id="@+id/buttonExtraWagonTarp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="extraTarpClicked"
                 android:text="ExtraTarp +1" />
 
             <Button
                 android:id="@+id/buttonFireStartingKit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="fireStartingKitButtonClicked"
                 android:text="FireStartingKit +1" />
         </LinearLayout>
 
@@ -176,11 +186,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="140dp"
+        android:id="@+id/textViewWalletAndWeight"
+        android:layout_width="300dp"
         android:layout_height="30dp"
-        android:layout_marginStart="176dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="621dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="80dp"
         android:layout_weight="1"
         android:text="Wallet: "
