@@ -40,24 +40,23 @@ public class RandomEvent {
             wagon.subtractItems(rand.nextInt(10), rand.nextInt(3));
             wagon.subtractItems(rand.nextInt(10), rand.nextInt(3));
         }
-        if ((temp % 7) == 0){
+        if ((temp % 7) == 0) {
             //storm/blizzard
-            if (trail.getTemperature() <= 32){System.out.println("A blizzard draws near! Your party hunkers down");}
-            else {System.out.print("A hail storm draws near! Your party hunkers down.");}
-            if (wagon.getPace() == 3) {trail.setDistance(trail.getDistance()-15);}
-            if (wagon.getPace() == 2) {trail.setDistance(trail.getDistance()-10);}
-            if (wagon.getPace() == 1) {trail.setDistance(trail.getDistance()-5);}
+            if (trail.getTemperature() <= 32) {
+                System.out.println("A blizzard draws near! Your party hunkers down");
+            } else {
+                System.out.print("A hail storm draws near! Your party hunkers down.");
+            }
+            if (wagon.getPace() == 3) {
+                trail.setDistance(trail.getDistance() - 15);
+            }
+            if (wagon.getPace() == 2) {
+                trail.setDistance(trail.getDistance() - 10);
+            }
+            if (wagon.getPace() == 1) {
+                trail.setDistance(trail.getDistance() - 5);
+            }
             System.out.println("A days worth of travel is lost");
-
-        }
-        if (temp == 34){
-            //lose party member, needs more of the party class setup beforehand
-         //  int temp2 = rand.nextInt(2) + 2;
-         //  if (temp2 == 2)
-
-        }
-        if (temp == 5){
-            //lose Ox
         }
         else {return;}
     }
