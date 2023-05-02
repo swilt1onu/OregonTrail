@@ -3,16 +3,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import com.example.oregontrail.R;
-
-import java.io.Serializable;
 
 /**
  * Class: Main Activity
@@ -56,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         isFirstTime = getIntent().getBooleanExtra("isFirstTime", true);
 
         if (isFirstTime){
-            Intent intent = new Intent(this, Intro.class);
+            Intent intent = new Intent(this, IntroActivity.class);
             intent.putExtra("Main Activity", this.getClass());
             startActivity(intent);
             return;
@@ -84,9 +77,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void btnClicked(View view){
         trail.day();
+        if(party.checkDeath()){
+            Intent intent = new Intent(this, EndActivity.class);
+            startActivity(intent);
+        }
         weatherText.setText(trail.getWeather());
         dayText.setText(String.valueOf(trail.getDayCount()));
     }
-
-
 }

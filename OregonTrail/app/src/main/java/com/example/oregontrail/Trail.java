@@ -32,6 +32,8 @@ public class Trail {
 
     Wagon wagon;
     Random generator;
+
+    Party party;
     /**
      * default constructor
      * Creates a trail object to be used in the game
@@ -40,7 +42,7 @@ public class Trail {
         generator = new Random(System.currentTimeMillis());
         wagon = new Wagon();
 //        Items items = new Items();
-        Party party = new Party();
+        party = new Party();
         //Variables}
     }
 
@@ -272,5 +274,6 @@ public class Trail {
         generateTemperature();
         updateDistance(wagon.getPace());
         incrementDayCount();
+        party.checkDeath();
     }
 }

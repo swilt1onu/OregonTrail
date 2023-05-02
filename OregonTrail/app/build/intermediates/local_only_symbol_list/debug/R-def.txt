@@ -20,6 +20,7 @@ id textView
 id textView2
 id titleText
 id weatherText
+layout activity_end
 layout activity_main
 layout intro
 layout store

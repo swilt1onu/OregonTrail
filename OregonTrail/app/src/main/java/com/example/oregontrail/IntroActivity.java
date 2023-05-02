@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Intro extends AppCompatActivity {
+public class IntroActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +14,7 @@ public class Intro extends AppCompatActivity {
     }
 
     public void introBtnClicked(View view){
-        Intent intent = new Intent(this, Store.class);
+        Intent intent = new Intent(this, StoreActivity.class);
         startActivity(intent);
     }
 }

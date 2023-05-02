@@ -1,5 +1,7 @@
 package com.example.oregontrail;
 
+import android.content.Intent;
+
 import java.util.Random;
 
 public class Party {
@@ -12,9 +14,9 @@ public class Party {
     private int tPH = 0;
     // These 4 variables store the names of the members in the party 1-4
     private String member1 = "Hattie Campbell";
-    private String member2 = "member2";
-    private String member3 = "member3";
-    private String member4 = "member4";
+    private String member2 = "Mary Campbell";
+    private String member3 = "John Campbell";
+    private String member4 = "Joseph Campbell";
 
     //These variables will be used to keep track of individual members health
     private int m1H = 0;
@@ -230,7 +232,7 @@ public class Party {
      * If the party member's health exceeds 140 then they will be checked every day to
      * see if they have died.
      */
-    public void checkDeath() {
+    public boolean checkDeath() {
         int temp1 = rand.nextInt(100);
         int temp2 = rand.nextInt(100);
         int temp3 = rand.nextInt(100);
@@ -254,6 +256,11 @@ public class Party {
             if (temp4 < 25) {
                 this.m4Dead = true;
             }
+        }
+        if(m1Dead && m2Dead && m3Dead && m4Dead){
+            return true;
+        } else{
+            return false;
         }
     }
 }

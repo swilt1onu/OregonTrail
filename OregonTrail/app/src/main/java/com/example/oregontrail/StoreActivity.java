@@ -7,8 +7,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.oregontrail.Items;
-
 /**
  * Contains the item data for the first 10 items in the store
  * keeps track of cost, availability, name, and description.
@@ -19,7 +17,7 @@ import com.example.oregontrail.Items;
  * check to see if the amount available the user wants is available
  * adds the item amount to the wagon / inventory.
  */
-public class Store extends AppCompatActivity {
+public class StoreActivity extends AppCompatActivity {
 
     TextView testText;
 
