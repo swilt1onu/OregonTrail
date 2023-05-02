@@ -19,9 +19,8 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="548dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/enterButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OregonTrailTitleLabel">
@@ -37,14 +36,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Weather: "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Day:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
         </LinearLayout>
 
         <LinearLayout
@@ -58,14 +57,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
                 android:id="@+id/dayText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
         </LinearLayout>
     </LinearLayout>
 
